@@ -3,11 +3,11 @@
     <title>table-styleing</title>
     <style>
       .page {
-        margin: 0 auto;
-        font-family: system-ui,  -apple-system, sans-serif;
-        color: #474747;
+        margin: auto;
+        font-family: system-ui, -apple-system, sans-serif;
+        color: #3c3939;
         width: 1380px;
-        padding: 5px;
+        padding: 8px;
       }
 
       #headline {
@@ -16,54 +16,154 @@
 
       .heading-image {
         width: 500px;
-        padding: 5px;
-        margin: auto;
-      }
-
-      #pokemonsTable {
-        margin: 0 auto;
-        width: 80%;
-      }
-
-      #pokemonsTable  thead {
-        background-color: rgb(64,  75,  164);
-        color: aliceblue;
+        padding: 18px;
       }
 
       #details {
-        margin: 0 auto;
         width: 100%;
       }
 
-       #pokemonsTable tbody tr:hover {
-        background-color: rgb(223, 232, 250); 
+      #pokemons-list {
+        margin: auto;
+        width: 77%;
+      }
+
+      #pokemons-list thead {
+        background-color: rgb(64, 75, 164);
+        color: aliceblue;
+      }
+
+      #pokemons-list tbody tr:hover {
+        background-color: rgb(223, 232, 250);
         cursor: pointer;
       }
 
-      #pokemonsTable thead > tr:hover { 
+      #pokemons-list thead tr:hover {
         background-color: rgb(55, 96, 173);
         cursor: pointer;
       }
 
-      #pokemonsTable * {
-        padding: 5px;
-        border-bottom: 1px double rgb(32,  34,  29);
-        border-color: rgb(173, 173, 206);
-        border-collapse: collapse;
-        text-align: center;
+      #pokemons-list tr td {
+        padding: 6px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(226, 227, 222);
       }
 
+      #pokemons-list * {
+        border-collapse: collapse;
+      }
+
+      #pokemons-list tbody td {
+        text-transform: uppercase;
+      }
+
+      #pokemons-list tr:nth-child(even) {
+        background-color: #f1f1f1;
+      }
+
+      .pokemon {
+        padding: 8px;
+        font-size: 8px;
+        border-radius: 6px;
+        text-transform: uppercase;
+      }
+
+      .grass-pokemon {
+        background-color: rgb(155, 203, 80);
+      }
+
+      .poisonous-pokemon {
+        background-color: rgb(185, 126, 200);
+      }
+
+      .fire-pokemon {
+        background-color: #fd7d24;
+        color: white;
+      }
+
+      .flying-pokemon {
+        background-color: #3dc7ef;
+        color: white;
+      }
+
+      .water-pokemon {
+        background-color: #4592c4;
+        color: white;
+      }
+
+      .bug-pokemon {
+        background-color: #729f3f;
+        color: white;
+      }
+
+      .normal-pokemon {
+        background-color: #919191;
+        color: white;
+      }
+
+      .electric-pokemon {
+        background-color: #eed535;
+      }
+
+      .ground-pokemon {
+        background-color: #ab9842;
+        color: white;
+      }
+
+      .psychic-pokemon {
+        background-color: #f366b9;
+        color: white;
+      }
+
+      .ghost-pokemon {
+        background-color: #7b62a3;
+        color: white;
+      }
+
+      .fairy-pokemon {
+        background-color: #fdb9e9;
+      }
+
+      .dark-pokemon {
+        background-color: #707070;
+        color: white;
+      }
+
+      .fighting-pokemon {
+        background-color: #d56523;
+        color: white;
+      }
+
+      .ice-pokemon {
+        background-color: #51c4e7;
+        color: white;
+      }
+
+      .rock-pokemon {
+        background-color: #a38c21;
+        color: white;
+      }
+
+      .steel-pokemon {
+        background-color: #9eb7b8;
+        color: white;
+      }
+
+      .dragon-pokemon {
+        background-color: #f06d57;
+        color: white;
+      }
     </style>
   </head>
   <body class="page">
     <section id="headline">
-      <img src="pokemon-23.svg" class="heading-image">
+      <img src="pokemon-23.svg" class="heading-image" />
     </section>
-    <section id="pokemonsTable">
-      <table id='details'>
+    <section id="pokemons-list">
+      <table id="details">
         <thead>
           <tr>
-            <td> Id</td>
+            <td>Id</td>
             <td>Name</td>
             <td>Types</td>
             <td>Speed</td>
@@ -78,8 +178,11 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td>Bulbasaur</td>
-            <td>grass, poison</td>
+            <td>bulbasaur</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
             <td>45</td>
             <td>45</td>
             <td>64</td>
@@ -87,204 +190,2451 @@
             <td>49</td>
             <td>69</td>
           </tr>
-          <tr><td>2</td><td>Ivysaur</td><td>grass, poison</td><td>60</td><td>60</td><td>142</td><td>62</td><td>63</td><td>130</td></tr>
-          <tr><td>3</td><td>Venusaur</td><td>grass, poison</td><td>80</td><td>80</td><td>236</td><td>82</td><td>83</td><td>1000</td></tr>
-          <tr><td>4</td><td>Charmander</td><td>fire</td><td>65</td><td>39</td><td>62</td><td>52</td><td>43</td><td>85</td></tr>
-          <tr><td>5</td><td>Charmeleon</td><td>fire</td><td>80</td><td>58</td><td>142</td><td>64</td><td>58</td><td>190</td></tr>
-          <tr><td>6</td><td>Charizard</td><td>fire, flying</td><td>100</td><td>78</td><td>240</td><td>84</td><td>78</td><td>905</td></tr>
-          <tr><td>7</td><td>Squirtle</td><td>water</td><td>43</td><td>44</td><td>63</td><td>48</td><td>65</td><td>90</td></tr>
-          <tr><td>8</td><td>Wartortle</td><td>water</td><td>58</td><td>59</td><td>142</td><td>63</td><td>80</td><td>225</td></tr>
-          <tr><td>9</td><td>Blastoise</td><td>water</td><td>78</td><td>79</td><td>239</td><td>83</td><td>100</td><td>855</td></tr>
-          <tr><td>10</td><td>Caterpie</td><td>bug</td><td>45</td><td>45</td><td>39</td><td>30</td><td>35</td><td>29</td></tr>
-          <tr><td>11</td><td>Metapod</td><td>bug</td><td>30</td><td>50</td><td>72</td><td>20</td><td>55</td><td>99</td></tr>
-          <tr><td>12</td><td>Butterfree</td><td>bug, flying</td><td>70</td><td>60</td><td>178</td><td>45</td><td>50</td><td>320</td></tr>
-          <tr><td>13</td><td>Weedle</td><td>bug, poison</td><td>50</td><td>40</td><td>39</td><td>35</td><td>30</td><td>32</td></tr>
-          <tr><td>14</td><td>Kakuna</td><td>bug, poison</td><td>35</td><td>45</td><td>72</td><td>25</td><td>50</td><td>100</td></tr>
-          <tr><td>15</td><td>Beedrill</td><td>bug, poison</td><td>75</td><td>65</td><td>178</td><td>90</td><td>40</td><td>295</td></tr>
-          <tr><td>16</td><td>Pidgey</td><td>normal, flying</td><td>56</td><td>40</td><td>50</td><td>45</td><td>40</td><td>18</td></tr>
-          <tr><td>17</td><td>Pidgeotto</td><td>normal, flying</td><td>71</td><td>63</td><td>122</td><td>60</td><td>55</td><td>300</td></tr>
-          <tr><td>18</td><td>Pidgeot</td><td>normal, flying</td><td>101</td><td>83</td><td>216</td><td>80</td><td>75</td><td>395</td></tr>
-          <tr><td>19</td><td>Rattata</td><td>normal</td><td>72</td><td>30</td><td>51</td><td>56</td><td>35</td><td>35</td></tr>
-          <tr><td>20</td><td>Raticate</td><td>normal</td><td>97</td><td>55</td><td>145</td><td>81</td><td>60</td><td>185</td></tr>
-          <tr><td>21</td><td>Spearow</td><td>normal, flying</td><td>70</td><td>40</td><td>52</td><td>60</td><td>30</td><td>20</td></tr>
-          <tr><td>22</td><td>Fearow</td><td>normal, flying</td><td>100</td><td>65</td><td>155</td><td>90</td><td>65</td><td>380</td></tr>
-          <tr><td>23</td><td>Ekans</td><td>poison</td><td>55</td><td>35</td><td>58</td><td>60</td><td>44</td><td>69</td></tr>
-          <tr><td>24</td><td>Arbok</td><td>poison</td><td>80</td><td>60</td><td>157</td><td>95</td><td>69</td><td>650</td></tr>
-          <tr><td>25</td><td>Pikachu</td><td>electric</td><td>90</td><td>35</td><td>112</td><td>55</td><td>40</td><td>60</td></tr>
-          <tr><td>26</td><td>Raichu</td><td>electric</td><td>110</td><td>60</td><td>218</td><td>90</td><td>55</td><td>300</td></tr>
-          <tr><td>27</td><td>Sandshrew</td><td>ground</td><td>40</td><td>50</td><td>60</td><td>75</td><td>85</td><td>120</td></tr>
-          <tr><td>28</td><td>Sandslash</td><td>ground</td><td>65</td><td>75</td><td>158</td><td>100</td><td>110</td><td>295</td></tr>
-          <tr><td>29</td><td>Nidoran-f</td><td>poison</td><td>41</td><td>55</td><td>55</td><td>47</td><td>52</td><td>70</td></tr>
-          <tr><td>30</td><td>Nidorina</td><td>poison</td><td>56</td><td>70</td><td>128</td><td>62</td><td>67</td><td>200</td></tr>
-          <tr><td>31</td><td>Nidoqueen</td><td>poison, ground</td><td>76</td><td>90</td><td>227</td><td>92</td><td>87</td><td>600</td></tr>
-          <tr><td>32</td><td>Nidoran-m</td><td>poison</td><td>50</td><td>46</td><td>55</td><td>57</td><td>40</td><td>90</td></tr>
-          <tr><td>33</td><td>Nidorino</td><td>poison</td><td>65</td><td>61</td><td>128</td><td>72</td><td>57</td><td>195</td></tr>
-          <tr><td>34</td><td>Nidoking</td><td>poison, ground</td><td>85</td><td>81</td><td>227</td><td>102</td><td>77</td><td>620</td></tr>
-          <tr><td>35</td><td>Clefairy</td><td>fairy</td><td>35</td><td>70</td><td>113</td><td>45</td><td>48</td><td>75</td></tr>
-          <tr><td>36</td><td>Clefable</td><td>fairy</td><td>60</td><td>95</td><td>217</td><td>70</td><td>73</td><td>400</td></tr>
-          <tr><td>37</td><td>Vulpix</td><td>fire</td><td>65</td><td>38</td><td>60</td><td>41</td><td>40</td><td>99</td></tr>
-          <tr><td>38</td><td>Ninetales</td><td>fire</td><td>100</td><td>73</td><td>177</td><td>76</td><td>75</td><td>199</td></tr>
-          <tr><td>39</td><td>Jigglypuff</td><td>normal, fairy</td><td>20</td><td>115</td><td>95</td><td>45</td><td>20</td><td>55</td></tr>
-          <tr><td>40</td><td>Wigglytuff</td><td>normal, fairy</td><td>45</td><td>140</td><td>196</td><td>70</td><td>45</td><td>120</td></tr>
-          <tr><td>41</td><td>Zubat</td><td>poison, flying</td><td>55</td><td>40</td><td>49</td><td>45</td><td>35</td><td>75</td></tr>
-          <tr><td>42</td><td>Golbat</td><td>poison, flying</td><td>90</td><td>75</td><td>159</td><td>80</td><td>70</td><td>550</td></tr>
-          <tr><td>43</td><td>Oddish</td><td>grass, poison</td><td>30</td><td>45</td><td>64</td><td>50</td><td>55</td><td>54</td></tr>
-          <tr><td>44</td><td>Gloom</td><td>grass, poison</td><td>40</td><td>60</td><td>138</td><td>65</td><td>70</td><td>86</td></tr>
-          <tr><td>45</td><td>Vileplume</td><td>grass, poison</td><td>50</td><td>75</td><td>221</td><td>80</td><td>85</td><td>186</td></tr>
-          <tr><td>46</td><td>Paras</td><td>bug, grass</td><td>25</td><td>35</td><td>57</td><td>70</td><td>55</td><td>54</td></tr>
-          <tr><td>47</td><td>Parasect</td><td>bug, grass</td><td>30</td><td>60</td><td>142</td><td>95</td><td>80</td><td>295</td></tr>
-          <tr><td>48</td><td>Venonat</td><td>bug, poison</td><td>45</td><td>60</td><td>61</td><td>55</td><td>50</td><td>300</td></tr>
-          <tr><td>49</td><td>Venomoth</td><td>bug, poison</td><td>90</td><td>70</td><td>158</td><td>65</td><td>60</td><td>125</td></tr>
-          <tr><td>50</td><td>Diglett</td><td>ground</td><td>95</td><td>10</td><td>53</td><td>55</td><td>25</td><td>8</td></tr>
-          <tr><td>51</td><td>Dugtrio</td><td>ground</td><td>120</td><td>35</td><td>149</td><td>100</td><td>50</td><td>333</td></tr>
-          <tr><td>52</td><td>Meowth</td><td>normal</td><td>90</td><td>40</td><td>58</td><td>45</td><td>35</td><td>42</td></tr>
-          <tr><td>53</td><td>Persian</td><td>normal</td><td>115</td><td>65</td><td>154</td><td>70</td><td>60</td><td>320</td></tr>
-          <tr><td>54</td><td>Psyduck</td><td>water</td><td>55</td><td>50</td><td>64</td><td>52</td><td>48</td><td>196</td></tr>
-          <tr><td>55</td><td>Golduck</td><td>water</td><td>85</td><td>80</td><td>175</td><td>82</td><td>78</td><td>766</td></tr>
-          <tr><td>56</td><td>Mankey</td><td>fighting</td><td>70</td><td>40</td><td>61</td><td>80</td><td>35</td><td>280</td></tr>
-          <tr><td>57</td><td>Primeape</td><td>fighting</td><td>95</td><td>65</td><td>159</td><td>105</td><td>60</td><td>320</td></tr>
-          <tr><td>58</td><td>Growlithe</td><td>fire</td><td>60</td><td>55</td><td>70</td><td>70</td><td>45</td><td>190</td></tr>
-          <tr><td>59</td><td>Arcanine</td><td>fire</td><td>95</td><td>90</td><td>194</td><td>110</td><td>80</td><td>1550</td></tr>
-          <tr><td>60</td><td>Poliwag</td><td>water</td><td>90</td><td>40</td><td>60</td><td>50</td><td>40</td><td>124</td></tr>
-          <tr><td>61</td><td>Poliwhirl</td><td>water</td><td>90</td><td>65</td><td>135</td><td>65</td><td>65</td><td>200</td></tr>
-          <tr><td>62</td><td>Poliwrath</td><td>water, fighting</td><td>70</td><td>90</td><td>230</td><td>95</td><td>95</td><td>540</td></tr>
-          <tr><td>63</td><td>Abra</td><td>psychic</td><td>90</td><td>25</td><td>62</td><td>20</td><td>15</td><td>195</td></tr>
-          <tr><td>64</td><td>Kadabra</td><td>psychic</td><td>105</td><td>40</td><td>140</td><td>35</td><td>30</td><td>565</td></tr>
-          <tr><td>65</td><td>Alakazam</td><td>psychic</td><td>120</td><td>55</td><td>225</td><td>50</td><td>45</td><td>480</td></tr>
-          <tr><td>66</td><td>Machop</td><td>fighting</td><td>35</td><td>70</td><td>61</td><td>80</td><td>50</td><td>195</td></tr>
-          <tr><td>67</td><td>Machoke</td><td>fighting</td><td>45</td><td>80</td><td>142</td><td>100</td><td>70</td><td>705</td></tr>
-          <tr><td>68</td><td>Machamp</td><td>fighting</td><td>55</td><td>90</td><td>227</td><td>130</td><td>80</td><td>1300</td></tr>
-          <tr><td>69</td><td>Bellsprout</td><td>grass, poison</td><td>40</td><td>50</td><td>60</td><td>75</td><td>35</td><td>40</td></tr>
-          <tr><td>70</td><td>Weepinbell</td><td>grass, poison</td><td>55</td><td>65</td><td>137</td><td>90</td><td>50</td><td>64</td></tr>
-          <tr><td>71</td><td>Victreebel</td><td>grass, poison</td><td>70</td><td>80</td><td>221</td><td>105</td><td>65</td><td>155</td></tr>
-          <tr><td>72</td><td>Tentacool</td><td>water, poison</td><td>70</td><td>40</td><td>67</td><td>40</td><td>35</td><td>455</td></tr>
-          <tr><td>73</td><td>Tentacruel</td><td>water, poison</td><td>100</td><td>80</td><td>180</td><td>70</td><td>65</td><td>550</td></tr>
-          <tr><td>74</td><td>Geodude</td><td>rock, ground</td><td>20</td><td>40</td><td>60</td><td>80</td><td>100</td><td>200</td></tr>
-          <tr><td>75</td><td>Graveler</td><td>rock, ground</td><td>35</td><td>55</td><td>137</td><td>95</td><td>115</td><td>1050</td></tr>
-          <tr><td>76</td><td>Golem</td><td>rock, ground</td><td>45</td><td>80</td><td>223</td><td>120</td><td>130</td><td>3000</td></tr>
-          <tr><td>77</td><td>Ponyta</td><td>fire</td><td>90</td><td>50</td><td>82</td><td>85</td><td>55</td><td>300</td></tr>
-          <tr><td>78</td><td>Rapidash</td><td>fire</td><td>105</td><td>65</td><td>175</td><td>100</td><td>70</td><td>950</td></tr>
-          <tr><td>79</td><td>Slowpoke</td><td>water, psychic</td><td>15</td><td>90</td><td>63</td><td>65</td><td>65</td><td>360</td></tr>
-          <tr><td>80</td><td>Slowbro</td><td>water, psychic</td><td>30</td><td>95</td><td>172</td><td>75</td><td>110</td><td>785</td></tr>
-          <tr><td>81</td><td>Magnemite</td><td>electric, steel</td><td>45</td><td>25</td><td>65</td><td>35</td><td>70</td><td>60</td></tr>
-          <tr><td>82</td><td>Magneton</td><td>electric, steel</td><td>70</td><td>50</td><td>163</td><td>60</td><td>95</td><td>600</td></tr>
-          <tr><td>83</td><td>Farfetchd</td><td>normal, flying</td><td>60</td><td>52</td><td>132</td><td>90</td><td>55</td><td>150</td></tr>
-          <tr><td>84</td><td>Doduo</td><td>normal, flying</td><td>75</td><td>35</td><td>62</td><td>85</td><td>45</td><td>392</td></tr>
-          <tr><td>85</td><td>Dodrio</td><td>normal, flying</td><td>110</td><td>60</td><td>165</td><td>110</td><td>70</td><td>852</td></tr>
-          <tr><td>86</td><td>Seel</td><td>water</td><td>45</td><td>65</td><td>65</td><td>45</td><td>55</td><td>900</td></tr>
-          <tr><td>87</td><td>Dewgong</td><td>water, ice</td><td>70</td><td>90</td><td>166</td><td>70</td><td>80</td><td>1200</td></tr>
-          <tr><td>88</td><td>Grimer</td><td>poison</td><td>25</td><td>80</td><td>65</td><td>80</td><td>50</td><td>300</td></tr>
-          <tr><td>89</td><td>Muk</td><td>poison</td><td>50</td><td>105</td><td>175</td><td>105</td><td>75</td><td>300</td></tr>
-          <tr><td>90</td><td>Shellder</td><td>water</td><td>40</td><td>30</td><td>61</td><td>65</td><td>100</td><td>40</td></tr>
-          <tr><td>91</td><td>Cloyster</td><td>water, ice</td><td>70</td><td>50</td><td>184</td><td>95</td><td>180</td><td>1325</td></tr>
-          <tr><td>92</td><td>Gastly</td><td>ghost, poison</td><td>80</td><td>30</td><td>62</td><td>35</td><td>30</td><td>1</td></tr>
-          <tr><td>93</td><td>Haunter</td><td>ghost, poison</td><td>95</td><td>45</td><td>142</td><td>50</td><td>45</td><td>1</td></tr>
-          <tr><td>94</td><td>Gengar</td><td>ghost, poison</td><td>110</td><td>60</td><td>225</td><td>65</td><td>60</td><td>405</td></tr>
-          <tr><td>95</td><td>Onix</td><td>rock, ground</td><td>70</td><td>35</td><td>77</td><td>45</td><td>160</td><td>2100</td></tr>
-          <tr><td>96</td><td>Drowzee</td><td>psychic</td><td>42</td><td>60</td><td>66</td><td>48</td><td>45</td><td>324</td></tr>
-          <tr><td>97</td><td>Hypno</td><td>psychic</td><td>67</td><td>85</td><td>169</td><td>73</td><td>70</td><td>756</td></tr>
-          <tr><td>98</td><td>Krabby</td><td>water</td><td>50</td><td>30</td><td>65</td><td>105</td><td>90</td><td>65</td></tr>
-          <tr><td>99</td><td>Kingler</td><td>water</td><td>75</td><td>55</td><td>166</td><td>130</td><td>115</td><td>600</td></tr>
-          <tr><td>100</td><td>Voltorb</td><td>electric</td><td>100</td><td>40</td><td>66</td><td>30</td><td>50</td><td>104</td></tr>
-          <tr><td>101</td><td>Electrode</td><td>electric</td><td>150</td><td>60</td><td>172</td><td>50</td><td>70</td><td>666</td></tr>
-          <tr><td>102</td><td>Exeggcute</td><td>grass, psychic</td><td>40</td><td>60</td><td>65</td><td>40</td><td>80</td><td>25</td></tr>
-          <tr><td>103</td><td>Exeggutor</td><td>grass, psychic</td><td>55</td><td>95</td><td>186</td><td>95</td><td>85</td><td>1200</td></tr>
-          <tr><td>104</td><td>Cubone</td><td>ground</td><td>35</td><td>50</td><td>64</td><td>50</td><td>95</td><td>65</td></tr>
-          <tr><td>105</td><td>Marowak</td><td>ground</td><td>45</td><td>60</td><td>149</td><td>80</td><td>110</td><td>450</td></tr>
-          <tr><td>106</td><td>Hitmonlee</td><td>fighting</td><td>87</td><td>50</td><td>159</td><td>120</td><td>53</td><td>498</td></tr>
-          <tr><td>107</td><td>Hitmonchan</td><td>fighting</td><td>76</td><td>50</td><td>159</td><td>105</td><td>79</td><td>502</td></tr>
-          <tr><td>108</td><td>Lickitung</td><td>normal</td><td>30</td><td>90</td><td>77</td><td>55</td><td>75</td><td>655</td></tr>
-          <tr><td>109</td><td>Koffing</td><td>poison</td><td>35</td><td>40</td><td>68</td><td>65</td><td>95</td><td>10</td></tr>
-          <tr><td>110</td><td>Weezing</td><td>poison</td><td>60</td><td>65</td><td>172</td><td>90</td><td>120</td><td>95</td></tr>
-          <tr><td>111</td><td>Rhyhorn</td><td>ground, rock</td><td>25</td><td>80</td><td>69</td><td>85</td><td>95</td><td>1150</td></tr>
-          <tr><td>112</td><td>Rhydon</td><td>ground, rock</td><td>40</td><td>105</td><td>170</td><td>130</td><td>120</td><td>1200</td></tr>
-          <tr><td>113</td><td>Chansey</td><td>normal</td><td>50</td><td>250</td><td>395</td><td>5</td><td>5</td><td>346</td></tr>
-          <tr><td>114</td><td>Tangela</td><td>grass</td><td>60</td><td>65</td><td>87</td><td>55</td><td>115</td><td>350</td></tr>
-          <tr><td>115</td><td>Kangaskhan</td><td>normal</td><td>90</td><td>105</td><td>172</td><td>95</td><td>80</td><td>800</td></tr>
-          <tr><td>116</td><td>Horsea</td><td>water</td><td>60</td><td>30</td><td>59</td><td>40</td><td>70</td><td>80</td></tr>
-          <tr><td>117</td><td>Seadra</td><td>water</td><td>85</td><td>55</td><td>154</td><td>65</td><td>95</td><td>250</td></tr>
-          <tr><td>118</td><td>Goldeen</td><td>water</td><td>63</td><td>45</td><td>64</td><td>67</td><td>60</td><td>150</td></tr>
-          <tr><td>119</td><td>Seaking</td><td>water</td><td>68</td><td>80</td><td>158</td><td>92</td><td>65</td><td>390</td></tr>
-          <tr><td>120</td><td>Staryu</td><td>water</td><td>85</td><td>30</td><td>68</td><td>45</td><td>55</td><td>345</td></tr>
-          <tr><td>121</td><td>Starmie</td><td>water, psychic</td><td>115</td><td>60</td><td>182</td><td>75</td><td>85</td><td>800</td></tr>
-          <tr><td>122</td><td>Mr-mime</td><td>psychic, fairy</td><td>90</td><td>40</td><td>161</td><td>45</td><td>65</td><td>545</td></tr>
-          <tr><td>123</td><td>Scyther</td><td>bug, flying</td><td>105</td><td>70</td><td>100</td><td>110</td><td>80</td><td>560</td></tr>
-          <tr><td>124</td><td>Jynx</td><td>ice, psychic</td><td>95</td><td>65</td><td>159</td><td>50</td><td>35</td><td>406</td></tr>
-          <tr><td>125</td><td>Electabuzz</td><td>electric</td><td>105</td><td>65</td><td>172</td><td>83</td><td>57</td><td>300</td></tr>
-          <tr><td>126</td><td>Magmar</td><td>fire</td><td>93</td><td>65</td><td>173</td><td>95</td><td>57</td><td>445</td></tr>
-          <tr><td>127</td><td>Pinsir</td><td>bug</td><td>85</td><td>65</td><td>175</td><td>125</td><td>100</td><td>550</td></tr>
-          <tr><td>128</td><td>Tauros</td><td>normal</td><td>110</td><td>75</td><td>172</td><td>100</td><td>95</td><td>884</td></tr>
-          <tr><td>129</td><td>Magikarp</td><td>water</td><td>80</td><td>20</td><td>40</td><td>10</td><td>55</td><td>100</td></tr>
-          <tr><td>130</td><td>Gyarados</td><td>water, flying</td><td>81</td><td>95</td><td>189</td><td>125</td><td>79</td><td>2350</td></tr>
-          <tr><td>131</td><td>Lapras</td><td>water, ice</td><td>60</td><td>130</td><td>187</td><td>85</td><td>80</td><td>2200</td></tr>
-          <tr><td>132</td><td>Ditto</td><td>normal</td><td>48</td><td>48</td><td>101</td><td>48</td><td>48</td><td>40</td></tr>
-          <tr><td>133</td><td>Eevee</td><td>normal</td><td>55</td><td>55</td><td>65</td><td>55</td><td>50</td><td>65</td></tr>
-          <tr><td>134</td><td>Vaporeon</td><td>water</td><td>65</td><td>130</td><td>184</td><td>65</td><td>60</td><td>290</td></tr>
-          <tr><td>135</td><td>Jolteon</td><td>electric</td><td>130</td><td>65</td><td>184</td><td>65</td><td>60</td><td>245</td></tr>
-          <tr><td>136</td><td>Flareon</td><td>fire</td><td>65</td><td>65</td><td>184</td><td>130</td><td>60</td><td>250</td></tr>
-          <tr><td>137</td><td>Porygon</td><td>normal</td><td>40</td><td>65</td><td>79</td><td>60</td><td>70</td><td>365</td></tr>
-          <tr><td>138</td><td>Omanyte</td><td>rock, water</td><td>35</td><td>35</td><td>71</td><td>40</td><td>100</td><td>75</td></tr>
-          <tr><td>139</td><td>Omastar</td><td>rock, water</td><td>55</td><td>70</td><td>173</td><td>60</td><td>125</td><td>350</td></tr>
-          <tr><td>140</td><td>Kabuto</td><td>rock, water</td><td>55</td><td>30</td><td>71</td><td>80</td><td>90</td><td>115</td></tr>
-          <tr><td>141</td><td>Kabutops</td><td>rock, water</td><td>80</td><td>60</td><td>173</td><td>115</td><td>105</td><td>405</td></tr>
-          <tr><td>142</td><td>Aerodactyl</td><td>rock, flying</td><td>130</td><td>80</td><td>180</td><td>105</td><td>65</td><td>590</td></tr>
-          <tr><td>143</td><td>Snorlax</td><td>normal</td><td>30</td><td>160</td><td>189</td><td>110</td><td>65</td><td>4600</td></tr>
-          <tr><td>144</td><td>Articuno</td><td>ice, flying</td><td>85</td><td>90</td><td>261</td><td>85</td><td>100</td><td>554</td></tr>
-          <tr><td>145</td><td>Zapdos</td><td>electric, flying</td><td>100</td><td>90</td><td>261</td><td>90</td><td>85</td><td>526</td></tr>
-          <tr><td>146</td><td>Moltres</td><td>fire, flying</td><td>90</td><td>90</td><td>261</td><td>100</td><td>90</td><td>600</td></tr>
-          <tr><td>147</td><td>Dratini</td><td>dragon</td><td>50</td><td>41</td><td>60</td><td>64</td><td>45</td><td>33</td></tr>
-          <tr><td>148</td><td>Dragonair</td><td>dragon</td><td>70</td><td>61</td><td>147</td><td>84</td><td>65</td><td>165</td></tr>
-          <tr><td>149</td><td>Dragonite</td><td>dragon, flying</td><td>80</td><td>91</td><td>270</td><td>134</td><td>95</td><td>2100</td></tr>
-          <tr><td>150</td><td>Mewtwo</td><td>psychic</td><td>130</td><td>106</td><td>306</td><td>110</td><td>90</td><td>1220</td></tr>
-          <tr><td>151</td><td>Mew</td><td>psychic</td><td>100</td><td>100</td><td>270</td><td>100</td><td>100</td><td>40</td></tr>
-          <tr><td>152</td><td>Chikorita</td><td>grass</td><td>45</td><td>45</td><td>64</td><td>49</td><td>65</td><td>64</td></tr>
-          <tr><td>153</td><td>Bayleef</td><td>grass</td><td>60</td><td>60</td><td>142</td><td>62</td><td>80</td><td>158</td></tr>
-          <tr><td>154</td><td>Meganium</td><td>grass</td><td>80</td><td>80</td><td>236</td><td>82</td><td>100</td><td>1005</td></tr>
-          <tr><td>155</td><td>Cyndaquil</td><td>fire</td><td>65</td><td>39</td><td>62</td><td>52</td><td>43</td><td>79</td></tr>
-          <tr><td>156</td><td>Quilava</td><td>fire</td><td>80</td><td>58</td><td>142</td><td>64</td><td>58</td><td>190</td></tr>
-          <tr><td>157</td><td>Typhlosion</td><td>fire</td><td>100</td><td>78</td><td>240</td><td>84</td><td>78</td><td>795</td></tr>
-          <tr><td>158</td><td>Totodile</td><td>water</td><td>43</td><td>50</td><td>63</td><td>65</td><td>64</td><td>95</td></tr>
-          <tr><td>159</td><td>Croconaw</td><td>water</td><td>58</td><td>65</td><td>142</td><td>80</td><td>80</td><td>250</td></tr>
-          <tr><td>160</td><td>Feraligatr</td><td>water</td><td>78</td><td>85</td><td>239</td><td>105</td><td>100</td><td>888</td></tr>
-          <tr><td>161</td><td>Sentret</td><td>normal</td><td>20</td><td>35</td><td>43</td><td>46</td><td>34</td><td>60</td></tr>
-          <tr><td>162</td><td>Furret</td><td>normal</td><td>90</td><td>85</td><td>145</td><td>76</td><td>64</td><td>325</td></tr>
-          <tr><td>163</td><td>Hoothoot</td><td>normal, flying</td><td>50</td><td>60</td><td>52</td><td>30</td><td>30</td><td>212</td></tr>
-          <tr><td>164</td><td>Noctowl</td><td>normal, flying</td><td>70</td><td>100</td><td>158</td><td>50</td><td>50</td><td>408</td></tr>
-          <tr><td>165</td><td>Ledyba</td><td>bug, flying</td><td>55</td><td>40</td><td>53</td><td>20</td><td>30</td><td>108</td></tr>
-          <tr><td>166</td><td>Ledian</td><td>bug, flying</td><td>85</td><td>55</td><td>137</td><td>35</td><td>50</td><td>356</td></tr>
-          <tr><td>167</td><td>Spinarak</td><td>bug, poison</td><td>30</td><td>40</td><td>50</td><td>60</td><td>40</td><td>85</td></tr>
-          <tr><td>168</td><td>Ariados</td><td>bug, poison</td><td>40</td><td>70</td><td>140</td><td>90</td><td>70</td><td>335</td></tr>
-          <tr><td>169</td><td>Crobat</td><td>poison, flying</td><td>130</td><td>85</td><td>241</td><td>90</td><td>80</td><td>750</td></tr>
-          <tr><td>170</td><td>Chinchou</td><td>water, electric</td><td>67</td><td>75</td><td>66</td><td>38</td><td>38</td><td>120</td></tr>
-          <tr><td>171</td><td>Lanturn</td><td>water, electric</td><td>67</td><td>125</td><td>161</td><td>58</td><td>58</td><td>225</td></tr>
-          <tr><td>172</td><td>Pichu</td><td>electric</td><td>60</td><td>20</td><td>41</td><td>40</td><td>15</td><td>20</td></tr>
-          <tr><td>173</td><td>Cleffa</td><td>fairy</td><td>15</td><td>50</td><td>44</td><td>25</td><td>28</td><td>30</td></tr>
-          <tr><td>174</td><td>Igglybuff</td><td>normal, fairy</td><td>15</td><td>90</td><td>42</td><td>30</td><td>15</td><td>10</td></tr>
-          <tr><td>175</td><td>Togepi</td><td>fairy</td><td>20</td><td>35</td><td>49</td><td>20</td><td>65</td><td>15</td></tr>
-          <tr><td>176</td><td>Togetic</td><td>fairy, flying</td><td>40</td><td>55</td><td>142</td><td>40</td><td>85</td><td>32</td></tr>
-          <tr><td>177</td><td>Natu</td><td>psychic, flying</td><td>70</td><td>40</td><td>64</td><td>50</td><td>45</td><td>20</td></tr>
-          <tr><td>178</td><td>Xatu</td><td>psychic, flying</td><td>95</td><td>65</td><td>165</td><td>75</td><td>70</td><td>150</td></tr>
-          <tr><td>179</td><td>Mareep</td><td>electric</td><td>35</td><td>55</td><td>56</td><td>40</td><td>40</td><td>78</td></tr>
-          <tr><td>180</td><td>Flaaffy</td><td>electric</td><td>45</td><td>70</td><td>128</td><td>55</td><td>55</td><td>133</td></tr>
-          <tr><td>181</td><td>Ampharos</td><td>electric</td><td>55</td><td>90</td><td>230</td><td>75</td><td>85</td><td>615</td></tr>
-          <tr><td>182</td><td>Bellossom</td><td>grass</td><td>50</td><td>75</td><td>221</td><td>80</td><td>95</td><td>58</td></tr>
-          <tr><td>183</td><td>Marill</td><td>water, fairy</td><td>40</td><td>70</td><td>88</td><td>20</td><td>50</td><td>85</td></tr>
-          <tr><td>184</td><td>Azumarill</td><td>water, fairy</td><td>50</td><td>100</td><td>189</td><td>50</td><td>80</td><td>285</td></tr>
-          <tr><td>185</td><td>Sudowoodo</td><td>rock</td><td>30</td><td>70</td><td>144</td><td>100</td><td>115</td><td>380</td></tr>
-          <tr><td>186</td><td>Politoed</td><td>water</td><td>70</td><td>90</td><td>225</td><td>75</td><td>75</td><td>339</td></tr>
-          <tr><td>187</td><td>Hoppip</td><td>grass, flying</td><td>50</td><td>35</td><td>50</td><td>35</td><td>40</td><td>5</td></tr>
-          <tr><td>188</td><td>Skiploom</td><td>grass, flying</td><td>80</td><td>55</td><td>119</td><td>45</td><td>50</td><td>10</td></tr>
-          <tr><td>189</td><td>Jumpluff</td><td>grass, flying</td><td>110</td><td>75</td><td>207</td><td>55</td><td>70</td><td>30</td></tr>
-          <tr><td>190</td><td>Aipom</td><td>normal</td><td>85</td><td>55</td><td>72</td><td>70</td><td>55</td><td>115</td></tr>
-          <tr><td>191</td><td>Sunkern</td><td>grass</td><td>30</td><td>30</td><td>36</td><td>30</td><td>30</td><td>18</td></tr>
-          <tr><td>192</td><td>Sunflora</td><td>grass</td><td>30</td><td>75</td><td>149</td><td>75</td><td>55</td><td>85</td></tr>
-          <tr><td>193</td><td>Yanma</td><td>bug, flying</td><td>95</td><td>65</td><td>78</td><td>65</td><td>45</td><td>380</td></tr>
-          <tr><td>194</td><td>Wooper</td><td>water, ground</td><td>15</td><td>55</td><td>42</td><td>45</td><td>45</td><td>85</td></tr>
-          <tr><td>195</td><td>Quagsire</td><td>water, ground</td><td>35</td><td>95</td><td>151</td><td>85</td><td>85</td><td>750</td></tr>
-          <tr><td>196</td><td>Espeon</td><td>psychic</td><td>110</td><td>65</td><td>184</td><td>65</td><td>60</td><td>265</td></tr>
-          <tr><td>197</td><td>Umbreon</td><td>dark</td><td>65</td><td>95</td><td>184</td><td>65</td><td>110</td><td>270</td></tr>
-          <tr><td>198</td><td>Murkrow</td><td>dark, flying</td><td>91</td><td>60</td><td>81</td><td>85</td><td>42</td><td>21</td></tr>
-          <tr><td>199</td><td>Slowking</td><td>water, psychic</td><td>30</td><td>95</td><td>172</td><td>75</td><td>80</td><td>795</td></tr>
+          <tr>
+            <td>2</td>
+            <td>ivysaur</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>60</td>
+            <td>60</td>
+            <td>142</td>
+            <td>62</td>
+            <td>63</td>
+            <td>130</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>venusaur</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>80</td>
+            <td>80</td>
+            <td>236</td>
+            <td>82</td>
+            <td>83</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>charmander</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>65</td>
+            <td>39</td>
+            <td>62</td>
+            <td>52</td>
+            <td>43</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>charmeleon</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>80</td>
+            <td>58</td>
+            <td>142</td>
+            <td>64</td>
+            <td>58</td>
+            <td>190</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>charizard</td>
+            <td>
+              <span class="fire-pokemon pokemon"> fire</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>100</td>
+            <td>78</td>
+            <td>240</td>
+            <td>84</td>
+            <td>78</td>
+            <td>905</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>squirtle</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>43</td>
+            <td>44</td>
+            <td>63</td>
+            <td>48</td>
+            <td>65</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>wartortle</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>58</td>
+            <td>59</td>
+            <td>142</td>
+            <td>63</td>
+            <td>80</td>
+            <td>225</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>blastoise</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>78</td>
+            <td>79</td>
+            <td>239</td>
+            <td>83</td>
+            <td>100</td>
+            <td>855</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>caterpie</td>
+            <td><span class="bug-pokemon pokemon">bug</span></td>
+            <td>45</td>
+            <td>45</td>
+            <td>39</td>
+            <td>30</td>
+            <td>35</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>metapod</td>
+            <td><span class="bug-pokemon pokemon">bug</span></td>
+            <td>30</td>
+            <td>50</td>
+            <td>72</td>
+            <td>20</td>
+            <td>55</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>butterfree</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>70</td>
+            <td>60</td>
+            <td>178</td>
+            <td>45</td>
+            <td>50</td>
+            <td>320</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>weedle</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>50</td>
+            <td>40</td>
+            <td>39</td>
+            <td>35</td>
+            <td>30</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>kakuna</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>35</td>
+            <td>45</td>
+            <td>72</td>
+            <td>25</td>
+            <td>50</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>beedrill</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>75</td>
+            <td>65</td>
+            <td>178</td>
+            <td>90</td>
+            <td>40</td>
+            <td>295</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>pidgey</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>56</td>
+            <td>40</td>
+            <td>50</td>
+            <td>45</td>
+            <td>40</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>pidgeotto</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>71</td>
+            <td>63</td>
+            <td>122</td>
+            <td>60</td>
+            <td>55</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>pidgeot</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>101</td>
+            <td>83</td>
+            <td>216</td>
+            <td>80</td>
+            <td>75</td>
+            <td>395</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>rattata</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>72</td>
+            <td>30</td>
+            <td>51</td>
+            <td>56</td>
+            <td>35</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>raticate</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>97</td>
+            <td>55</td>
+            <td>145</td>
+            <td>81</td>
+            <td>60</td>
+            <td>185</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>spearow</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>70</td>
+            <td>40</td>
+            <td>52</td>
+            <td>60</td>
+            <td>30</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>fearow</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>100</td>
+            <td>65</td>
+            <td>155</td>
+            <td>90</td>
+            <td>65</td>
+            <td>380</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>ekans</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>55</td>
+            <td>35</td>
+            <td>58</td>
+            <td>60</td>
+            <td>44</td>
+            <td>69</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>arbok</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>80</td>
+            <td>60</td>
+            <td>157</td>
+            <td>95</td>
+            <td>69</td>
+            <td>650</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>pikachu</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>90</td>
+            <td>35</td>
+            <td>112</td>
+            <td>55</td>
+            <td>40</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>raichu</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>110</td>
+            <td>60</td>
+            <td>218</td>
+            <td>90</td>
+            <td>55</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>sandshrew</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>75</td>
+            <td>85</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>sandslash</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>65</td>
+            <td>75</td>
+            <td>158</td>
+            <td>100</td>
+            <td>110</td>
+            <td>295</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>nidoran-f</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>41</td>
+            <td>55</td>
+            <td>55</td>
+            <td>47</td>
+            <td>52</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>nidorina</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>56</td>
+            <td>70</td>
+            <td>128</td>
+            <td>62</td>
+            <td>67</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>nidoqueen</td>
+            <td>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>76</td>
+            <td>90</td>
+            <td>227</td>
+            <td>92</td>
+            <td>87</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>nidoran-m</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>50</td>
+            <td>46</td>
+            <td>55</td>
+            <td>57</td>
+            <td>40</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>nidorino</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>65</td>
+            <td>61</td>
+            <td>128</td>
+            <td>72</td>
+            <td>57</td>
+            <td>195</td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>nidoking</td>
+            <td>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>85</td>
+            <td>81</td>
+            <td>227</td>
+            <td>102</td>
+            <td>77</td>
+            <td>620</td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>clefairy</td>
+            <td><span class="fairy-pokemon pokemon">fairy</span></td>
+            <td>35</td>
+            <td>70</td>
+            <td>113</td>
+            <td>45</td>
+            <td>48</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td>clefable</td>
+            <td><span class="fairy-pokemon pokemon">fairy</span></td>
+            <td>60</td>
+            <td>95</td>
+            <td>217</td>
+            <td>70</td>
+            <td>73</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td>vulpix</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>65</td>
+            <td>38</td>
+            <td>60</td>
+            <td>41</td>
+            <td>40</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>38</td>
+            <td>ninetales</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>100</td>
+            <td>73</td>
+            <td>177</td>
+            <td>76</td>
+            <td>75</td>
+            <td>199</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td>jigglypuff</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>20</td>
+            <td>115</td>
+            <td>95</td>
+            <td>45</td>
+            <td>20</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td>wigglytuff</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>45</td>
+            <td>140</td>
+            <td>196</td>
+            <td>70</td>
+            <td>45</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>41</td>
+            <td>zubat</td>
+            <td>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>55</td>
+            <td>40</td>
+            <td>49</td>
+            <td>45</td>
+            <td>35</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>42</td>
+            <td>golbat</td>
+            <td>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>90</td>
+            <td>75</td>
+            <td>159</td>
+            <td>80</td>
+            <td>70</td>
+            <td>550</td>
+          </tr>
+          <tr>
+            <td>43</td>
+            <td>oddish</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>30</td>
+            <td>45</td>
+            <td>64</td>
+            <td>50</td>
+            <td>55</td>
+            <td>54</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td>gloom</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>40</td>
+            <td>60</td>
+            <td>138</td>
+            <td>65</td>
+            <td>70</td>
+            <td>86</td>
+          </tr>
+          <tr>
+            <td>45</td>
+            <td>vileplume</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>50</td>
+            <td>75</td>
+            <td>221</td>
+            <td>80</td>
+            <td>85</td>
+            <td>186</td>
+          </tr>
+          <tr>
+            <td>46</td>
+            <td>paras</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="grass-pokemon pokemon">grass</span>
+            </td>
+            <td>25</td>
+            <td>35</td>
+            <td>57</td>
+            <td>70</td>
+            <td>55</td>
+            <td>54</td>
+          </tr>
+          <tr>
+            <td>47</td>
+            <td>parasect</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="grass-pokemon pokemon">grass</span>
+            </td>
+            <td>30</td>
+            <td>60</td>
+            <td>142</td>
+            <td>95</td>
+            <td>80</td>
+            <td>295</td>
+          </tr>
+          <tr>
+            <td>48</td>
+            <td>venonat</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>45</td>
+            <td>60</td>
+            <td>61</td>
+            <td>55</td>
+            <td>50</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td>venomoth</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>90</td>
+            <td>70</td>
+            <td>158</td>
+            <td>65</td>
+            <td>60</td>
+            <td>125</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td>diglett</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>95</td>
+            <td>10</td>
+            <td>53</td>
+            <td>55</td>
+            <td>25</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>51</td>
+            <td>dugtrio</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>120</td>
+            <td>35</td>
+            <td>149</td>
+            <td>100</td>
+            <td>50</td>
+            <td>333</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td>meowth</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>90</td>
+            <td>40</td>
+            <td>58</td>
+            <td>45</td>
+            <td>35</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>53</td>
+            <td>persian</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>115</td>
+            <td>65</td>
+            <td>154</td>
+            <td>70</td>
+            <td>60</td>
+            <td>320</td>
+          </tr>
+          <tr>
+            <td>54</td>
+            <td>psyduck</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>55</td>
+            <td>50</td>
+            <td>64</td>
+            <td>52</td>
+            <td>48</td>
+            <td>196</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td>golduck</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>85</td>
+            <td>80</td>
+            <td>175</td>
+            <td>82</td>
+            <td>78</td>
+            <td>766</td>
+          </tr>
+          <tr>
+            <td>56</td>
+            <td>mankey</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>70</td>
+            <td>40</td>
+            <td>61</td>
+            <td>80</td>
+            <td>35</td>
+            <td>280</td>
+          </tr>
+          <tr>
+            <td>57</td>
+            <td>primeape</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>95</td>
+            <td>65</td>
+            <td>159</td>
+            <td>105</td>
+            <td>60</td>
+            <td>320</td>
+          </tr>
+          <tr>
+            <td>58</td>
+            <td>growlithe</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>60</td>
+            <td>55</td>
+            <td>70</td>
+            <td>70</td>
+            <td>45</td>
+            <td>190</td>
+          </tr>
+          <tr>
+            <td>59</td>
+            <td>arcanine</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>95</td>
+            <td>90</td>
+            <td>194</td>
+            <td>110</td>
+            <td>80</td>
+            <td>1550</td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td>poliwag</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>90</td>
+            <td>40</td>
+            <td>60</td>
+            <td>50</td>
+            <td>40</td>
+            <td>124</td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td>poliwhirl</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>90</td>
+            <td>65</td>
+            <td>135</td>
+            <td>65</td>
+            <td>65</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td>poliwrath</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="fighting-pokemon pokemon">fighting</span>
+            </td>
+            <td>70</td>
+            <td>90</td>
+            <td>230</td>
+            <td>95</td>
+            <td>95</td>
+            <td>540</td>
+          </tr>
+          <tr>
+            <td>63</td>
+            <td>abra</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>90</td>
+            <td>25</td>
+            <td>62</td>
+            <td>20</td>
+            <td>15</td>
+            <td>195</td>
+          </tr>
+          <tr>
+            <td>64</td>
+            <td>kadabra</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>105</td>
+            <td>40</td>
+            <td>140</td>
+            <td>35</td>
+            <td>30</td>
+            <td>565</td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td>alakazam</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>120</td>
+            <td>55</td>
+            <td>225</td>
+            <td>50</td>
+            <td>45</td>
+            <td>480</td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td>machop</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>35</td>
+            <td>70</td>
+            <td>61</td>
+            <td>80</td>
+            <td>50</td>
+            <td>195</td>
+          </tr>
+          <tr>
+            <td>67</td>
+            <td>machoke</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>45</td>
+            <td>80</td>
+            <td>142</td>
+            <td>100</td>
+            <td>70</td>
+            <td>705</td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td>machamp</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>55</td>
+            <td>90</td>
+            <td>227</td>
+            <td>130</td>
+            <td>80</td>
+            <td>1300</td>
+          </tr>
+          <tr>
+            <td>69</td>
+            <td>bellsprout</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>75</td>
+            <td>35</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td>weepinbell</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>55</td>
+            <td>65</td>
+            <td>137</td>
+            <td>90</td>
+            <td>50</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td>victreebel</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>70</td>
+            <td>80</td>
+            <td>221</td>
+            <td>105</td>
+            <td>65</td>
+            <td>155</td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td>tentacool</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>70</td>
+            <td>40</td>
+            <td>67</td>
+            <td>40</td>
+            <td>35</td>
+            <td>455</td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td>tentacruel</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>100</td>
+            <td>80</td>
+            <td>180</td>
+            <td>70</td>
+            <td>65</td>
+            <td>550</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td>geodude</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>20</td>
+            <td>40</td>
+            <td>60</td>
+            <td>80</td>
+            <td>100</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>75</td>
+            <td>graveler</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>35</td>
+            <td>55</td>
+            <td>137</td>
+            <td>95</td>
+            <td>115</td>
+            <td>1050</td>
+          </tr>
+          <tr>
+            <td>76</td>
+            <td>golem</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>45</td>
+            <td>80</td>
+            <td>223</td>
+            <td>120</td>
+            <td>130</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+            <td>77</td>
+            <td>ponyta</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>90</td>
+            <td>50</td>
+            <td>82</td>
+            <td>85</td>
+            <td>55</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>rapidash</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>105</td>
+            <td>65</td>
+            <td>175</td>
+            <td>100</td>
+            <td>70</td>
+            <td>950</td>
+          </tr>
+          <tr>
+            <td>79</td>
+            <td>slowpoke</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>15</td>
+            <td>90</td>
+            <td>63</td>
+            <td>65</td>
+            <td>65</td>
+            <td>360</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td>slowbro</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>30</td>
+            <td>95</td>
+            <td>172</td>
+            <td>75</td>
+            <td>110</td>
+            <td>785</td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td>magnemite</td>
+            <td>
+              <span class="electric-pokemon pokemon">electric</span>
+              <span class="steel-pokemon pokemon">steel</span>
+            </td>
+            <td>45</td>
+            <td>25</td>
+            <td>65</td>
+            <td>35</td>
+            <td>70</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>magneton</td>
+            <td>
+              <span class="electric-pokemon pokemon">electric</span>
+              <span class="steel-pokemon pokemon">steel</span>
+            </td>
+            <td>70</td>
+            <td>50</td>
+            <td>163</td>
+            <td>60</td>
+            <td>95</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td>farfetchd</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>60</td>
+            <td>52</td>
+            <td>132</td>
+            <td>90</td>
+            <td>55</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td>doduo</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>75</td>
+            <td>35</td>
+            <td>62</td>
+            <td>85</td>
+            <td>45</td>
+            <td>392</td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td>dodrio</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>110</td>
+            <td>60</td>
+            <td>165</td>
+            <td>110</td>
+            <td>70</td>
+            <td>852</td>
+          </tr>
+          <tr>
+            <td>86</td>
+            <td>seel</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>45</td>
+            <td>65</td>
+            <td>65</td>
+            <td>45</td>
+            <td>55</td>
+            <td>900</td>
+          </tr>
+          <tr>
+            <td>87</td>
+            <td>dewgong</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="ice-pokemon pokemon">ice</span>
+            </td>
+            <td>70</td>
+            <td>90</td>
+            <td>166</td>
+            <td>70</td>
+            <td>80</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>88</td>
+            <td>grimer</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>25</td>
+            <td>80</td>
+            <td>65</td>
+            <td>80</td>
+            <td>50</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>89</td>
+            <td>muk</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>50</td>
+            <td>105</td>
+            <td>175</td>
+            <td>105</td>
+            <td>75</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td>shellder</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>40</td>
+            <td>30</td>
+            <td>61</td>
+            <td>65</td>
+            <td>100</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td>cloyster</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="ice-pokemon pokemon">ice</span>
+            </td>
+            <td>70</td>
+            <td>50</td>
+            <td>184</td>
+            <td>95</td>
+            <td>180</td>
+            <td>1325</td>
+          </tr>
+          <tr>
+            <td>92</td>
+            <td>gastly</td>
+            <td>
+              <span class="ghost-pokemon pokemon">ghost</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>80</td>
+            <td>30</td>
+            <td>62</td>
+            <td>35</td>
+            <td>30</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>93</td>
+            <td>haunter</td>
+            <td>
+              <span class="ghost-pokemon pokemon">ghost</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>95</td>
+            <td>45</td>
+            <td>142</td>
+            <td>50</td>
+            <td>45</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>94</td>
+            <td>gengar</td>
+            <td>
+              <span class="ghost-pokemon pokemon">ghost</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>110</td>
+            <td>60</td>
+            <td>225</td>
+            <td>65</td>
+            <td>60</td>
+            <td>405</td>
+          </tr>
+          <tr>
+            <td>95</td>
+            <td>onix</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>70</td>
+            <td>35</td>
+            <td>77</td>
+            <td>45</td>
+            <td>160</td>
+            <td>2100</td>
+          </tr>
+          <tr>
+            <td>96</td>
+            <td>drowzee</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>42</td>
+            <td>60</td>
+            <td>66</td>
+            <td>48</td>
+            <td>45</td>
+            <td>324</td>
+          </tr>
+          <tr>
+            <td>97</td>
+            <td>hypno</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>67</td>
+            <td>85</td>
+            <td>169</td>
+            <td>73</td>
+            <td>70</td>
+            <td>756</td>
+          </tr>
+          <tr>
+            <td>98</td>
+            <td>krabby</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>50</td>
+            <td>30</td>
+            <td>65</td>
+            <td>105</td>
+            <td>90</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>99</td>
+            <td>kingler</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>75</td>
+            <td>55</td>
+            <td>166</td>
+            <td>130</td>
+            <td>115</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>voltorb</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>100</td>
+            <td>40</td>
+            <td>66</td>
+            <td>30</td>
+            <td>50</td>
+            <td>104</td>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>electrode</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>150</td>
+            <td>60</td>
+            <td>172</td>
+            <td>50</td>
+            <td>70</td>
+            <td>666</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>exeggcute</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>40</td>
+            <td>60</td>
+            <td>65</td>
+            <td>40</td>
+            <td>80</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>exeggutor</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>55</td>
+            <td>95</td>
+            <td>186</td>
+            <td>95</td>
+            <td>85</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>cubone</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>35</td>
+            <td>50</td>
+            <td>64</td>
+            <td>50</td>
+            <td>95</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>105</td>
+            <td>marowak</td>
+            <td><span class="ground-pokemon pokemon">ground</span></td>
+            <td>45</td>
+            <td>60</td>
+            <td>149</td>
+            <td>80</td>
+            <td>110</td>
+            <td>450</td>
+          </tr>
+          <tr>
+            <td>106</td>
+            <td>hitmonlee</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>87</td>
+            <td>50</td>
+            <td>159</td>
+            <td>120</td>
+            <td>53</td>
+            <td>498</td>
+          </tr>
+          <tr>
+            <td>107</td>
+            <td>hitmonchan</td>
+            <td><span class="fighting-pokemon pokemon">fighting</span></td>
+            <td>76</td>
+            <td>50</td>
+            <td>159</td>
+            <td>105</td>
+            <td>79</td>
+            <td>502</td>
+          </tr>
+          <tr>
+            <td>108</td>
+            <td>lickitung</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>30</td>
+            <td>90</td>
+            <td>77</td>
+            <td>55</td>
+            <td>75</td>
+            <td>655</td>
+          </tr>
+          <tr>
+            <td>109</td>
+            <td>koffing</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>35</td>
+            <td>40</td>
+            <td>68</td>
+            <td>65</td>
+            <td>95</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>110</td>
+            <td>weezing</td>
+            <td><span class="poisonous-pokemon pokemon"> poison</span></td>
+            <td>60</td>
+            <td>65</td>
+            <td>172</td>
+            <td>90</td>
+            <td>120</td>
+            <td>95</td>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td>rhyhorn</td>
+            <td>
+              <span class="ground-pokemon pokemon">ground</span>
+              <span class="rock-pokemon pokemon">rock</span>
+            </td>
+            <td>25</td>
+            <td>80</td>
+            <td>69</td>
+            <td>85</td>
+            <td>95</td>
+            <td>1150</td>
+          </tr>
+          <tr>
+            <td>112</td>
+            <td>rhydon</td>
+            <td>
+              <span class="ground-pokemon pokemon">ground</span>
+              <span class="rock-pokemon pokemon">rock</span>
+            </td>
+            <td>40</td>
+            <td>105</td>
+            <td>170</td>
+            <td>130</td>
+            <td>120</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>113</td>
+            <td>chansey</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>50</td>
+            <td>250</td>
+            <td>395</td>
+            <td>5</td>
+            <td>5</td>
+            <td>346</td>
+          </tr>
+          <tr>
+            <td>114</td>
+            <td>tangela</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>60</td>
+            <td>65</td>
+            <td>87</td>
+            <td>55</td>
+            <td>115</td>
+            <td>350</td>
+          </tr>
+          <tr>
+            <td>115</td>
+            <td>kangaskhan</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>90</td>
+            <td>105</td>
+            <td>172</td>
+            <td>95</td>
+            <td>80</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>116</td>
+            <td>horsea</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>60</td>
+            <td>30</td>
+            <td>59</td>
+            <td>40</td>
+            <td>70</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>117</td>
+            <td>seadra</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>85</td>
+            <td>55</td>
+            <td>154</td>
+            <td>65</td>
+            <td>95</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>118</td>
+            <td>goldeen</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>63</td>
+            <td>45</td>
+            <td>64</td>
+            <td>67</td>
+            <td>60</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>119</td>
+            <td>seaking</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>68</td>
+            <td>80</td>
+            <td>158</td>
+            <td>92</td>
+            <td>65</td>
+            <td>390</td>
+          </tr>
+          <tr>
+            <td>120</td>
+            <td>staryu</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>85</td>
+            <td>30</td>
+            <td>68</td>
+            <td>45</td>
+            <td>55</td>
+            <td>345</td>
+          </tr>
+          <tr>
+            <td>121</td>
+            <td>starmie</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>115</td>
+            <td>60</td>
+            <td>182</td>
+            <td>75</td>
+            <td>85</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td>mr-mime</td>
+            <td>
+              <span class="psychic-pokemon pokemon">psychic</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>90</td>
+            <td>40</td>
+            <td>161</td>
+            <td>45</td>
+            <td>65</td>
+            <td>545</td>
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>scyther</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>105</td>
+            <td>70</td>
+            <td>100</td>
+            <td>110</td>
+            <td>80</td>
+            <td>560</td>
+          </tr>
+          <tr>
+            <td>124</td>
+            <td>jynx</td>
+            <td>
+              <span class="ice-pokemon pokemon">ice</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>95</td>
+            <td>65</td>
+            <td>159</td>
+            <td>50</td>
+            <td>35</td>
+            <td>406</td>
+          </tr>
+          <tr>
+            <td>125</td>
+            <td>electabuzz</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>105</td>
+            <td>65</td>
+            <td>172</td>
+            <td>83</td>
+            <td>57</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>126</td>
+            <td>magmar</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>93</td>
+            <td>65</td>
+            <td>173</td>
+            <td>95</td>
+            <td>57</td>
+            <td>445</td>
+          </tr>
+          <tr>
+            <td>127</td>
+            <td>pinsir</td>
+            <td><span class="bug-pokemon pokemon">bug</span></td>
+            <td>85</td>
+            <td>65</td>
+            <td>175</td>
+            <td>125</td>
+            <td>100</td>
+            <td>550</td>
+          </tr>
+          <tr>
+            <td>128</td>
+            <td>tauros</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>110</td>
+            <td>75</td>
+            <td>172</td>
+            <td>100</td>
+            <td>95</td>
+            <td>884</td>
+          </tr>
+          <tr>
+            <td>129</td>
+            <td>magikarp</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>80</td>
+            <td>20</td>
+            <td>40</td>
+            <td>10</td>
+            <td>55</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>130</td>
+            <td>gyarados</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>81</td>
+            <td>95</td>
+            <td>189</td>
+            <td>125</td>
+            <td>79</td>
+            <td>2350</td>
+          </tr>
+          <tr>
+            <td>131</td>
+            <td>lapras</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="ice-pokemon pokemon">ice</span>
+            </td>
+            <td>60</td>
+            <td>130</td>
+            <td>187</td>
+            <td>85</td>
+            <td>80</td>
+            <td>2200</td>
+          </tr>
+          <tr>
+            <td>132</td>
+            <td>ditto</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>48</td>
+            <td>48</td>
+            <td>101</td>
+            <td>48</td>
+            <td>48</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>133</td>
+            <td>eevee</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>55</td>
+            <td>55</td>
+            <td>65</td>
+            <td>55</td>
+            <td>50</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>134</td>
+            <td>vaporeon</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>65</td>
+            <td>130</td>
+            <td>184</td>
+            <td>65</td>
+            <td>60</td>
+            <td>290</td>
+          </tr>
+          <tr>
+            <td>135</td>
+            <td>jolteon</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>130</td>
+            <td>65</td>
+            <td>184</td>
+            <td>65</td>
+            <td>60</td>
+            <td>245</td>
+          </tr>
+          <tr>
+            <td>136</td>
+            <td>flareon</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>65</td>
+            <td>65</td>
+            <td>184</td>
+            <td>130</td>
+            <td>60</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>137</td>
+            <td>porygon</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>40</td>
+            <td>65</td>
+            <td>79</td>
+            <td>60</td>
+            <td>70</td>
+            <td>365</td>
+          </tr>
+          <tr>
+            <td>138</td>
+            <td>omanyte</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="water-pokemon pokemon">water</span>
+            </td>
+            <td>35</td>
+            <td>35</td>
+            <td>71</td>
+            <td>40</td>
+            <td>100</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>139</td>
+            <td>omastar</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="water-pokemon pokemon">water</span>
+            </td>
+            <td>55</td>
+            <td>70</td>
+            <td>173</td>
+            <td>60</td>
+            <td>125</td>
+            <td>350</td>
+          </tr>
+          <tr>
+            <td>140</td>
+            <td>kabuto</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="water-pokemon pokemon">water</span>
+            </td>
+            <td>55</td>
+            <td>30</td>
+            <td>71</td>
+            <td>80</td>
+            <td>90</td>
+            <td>115</td>
+          </tr>
+          <tr>
+            <td>141</td>
+            <td>kabutops</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="water-pokemon pokemon">water</span>
+            </td>
+            <td>80</td>
+            <td>60</td>
+            <td>173</td>
+            <td>115</td>
+            <td>105</td>
+            <td>405</td>
+          </tr>
+          <tr>
+            <td>142</td>
+            <td>aerodactyl</td>
+            <td>
+              <span class="rock-pokemon pokemon">rock</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>130</td>
+            <td>80</td>
+            <td>180</td>
+            <td>105</td>
+            <td>65</td>
+            <td>590</td>
+          </tr>
+          <tr>
+            <td>143</td>
+            <td>snorlax</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>30</td>
+            <td>160</td>
+            <td>189</td>
+            <td>110</td>
+            <td>65</td>
+            <td>4600</td>
+          </tr>
+          <tr>
+            <td>144</td>
+            <td>articuno</td>
+            <td>
+              <span class="ice-pokemon pokemon">ice</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>85</td>
+            <td>90</td>
+            <td>261</td>
+            <td>85</td>
+            <td>100</td>
+            <td>554</td>
+          </tr>
+          <tr>
+            <td>145</td>
+            <td>zapdos</td>
+            <td>
+              <span class="electric-pokemon pokemon">electric</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>100</td>
+            <td>90</td>
+            <td>261</td>
+            <td>90</td>
+            <td>85</td>
+            <td>526</td>
+          </tr>
+          <tr>
+            <td>146</td>
+            <td>moltres</td>
+            <td>
+              <span class="fire-pokemon pokemon"> fire</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>90</td>
+            <td>90</td>
+            <td>261</td>
+            <td>100</td>
+            <td>90</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>147</td>
+            <td>dratini</td>
+            <td><span class="dragon-pokemon pokemon">dragon</span></td>
+            <td>50</td>
+            <td>41</td>
+            <td>60</td>
+            <td>64</td>
+            <td>45</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>148</td>
+            <td>dragonair</td>
+            <td><span class="dragon-pokemon pokemon">dragon</span></td>
+            <td>70</td>
+            <td>61</td>
+            <td>147</td>
+            <td>84</td>
+            <td>65</td>
+            <td>165</td>
+          </tr>
+          <tr>
+            <td>149</td>
+            <td>dragonite</td>
+            <td>
+              <span class="dragon-pokemon pokemon">dragon</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>80</td>
+            <td>91</td>
+            <td>270</td>
+            <td>134</td>
+            <td>95</td>
+            <td>2100</td>
+          </tr>
+          <tr>
+            <td>150</td>
+            <td>mewtwo</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>130</td>
+            <td>106</td>
+            <td>306</td>
+            <td>110</td>
+            <td>90</td>
+            <td>1220</td>
+          </tr>
+          <tr>
+            <td>151</td>
+            <td>mew</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>100</td>
+            <td>100</td>
+            <td>270</td>
+            <td>100</td>
+            <td>100</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>152</td>
+            <td>chikorita</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>45</td>
+            <td>45</td>
+            <td>64</td>
+            <td>49</td>
+            <td>65</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>153</td>
+            <td>bayleef</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>60</td>
+            <td>60</td>
+            <td>142</td>
+            <td>62</td>
+            <td>80</td>
+            <td>158</td>
+          </tr>
+          <tr>
+            <td>154</td>
+            <td>meganium</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>80</td>
+            <td>80</td>
+            <td>236</td>
+            <td>82</td>
+            <td>100</td>
+            <td>1005</td>
+          </tr>
+          <tr>
+            <td>155</td>
+            <td>cyndaquil</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>65</td>
+            <td>39</td>
+            <td>62</td>
+            <td>52</td>
+            <td>43</td>
+            <td>79</td>
+          </tr>
+          <tr>
+            <td>156</td>
+            <td>quilava</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>80</td>
+            <td>58</td>
+            <td>142</td>
+            <td>64</td>
+            <td>58</td>
+            <td>190</td>
+          </tr>
+          <tr>
+            <td>157</td>
+            <td>typhlosion</td>
+            <td><span class="fire-pokemon pokemon"> fire</span></td>
+            <td>100</td>
+            <td>78</td>
+            <td>240</td>
+            <td>84</td>
+            <td>78</td>
+            <td>795</td>
+          </tr>
+          <tr>
+            <td>158</td>
+            <td>totodile</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>43</td>
+            <td>50</td>
+            <td>63</td>
+            <td>65</td>
+            <td>64</td>
+            <td>95</td>
+          </tr>
+          <tr>
+            <td>159</td>
+            <td>croconaw</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>58</td>
+            <td>65</td>
+            <td>142</td>
+            <td>80</td>
+            <td>80</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>160</td>
+            <td>feraligatr</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>78</td>
+            <td>85</td>
+            <td>239</td>
+            <td>105</td>
+            <td>100</td>
+            <td>888</td>
+          </tr>
+          <tr>
+            <td>161</td>
+            <td>sentret</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>20</td>
+            <td>35</td>
+            <td>43</td>
+            <td>46</td>
+            <td>34</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>162</td>
+            <td>furret</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>90</td>
+            <td>85</td>
+            <td>145</td>
+            <td>76</td>
+            <td>64</td>
+            <td>325</td>
+          </tr>
+          <tr>
+            <td>163</td>
+            <td>hoothoot</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>50</td>
+            <td>60</td>
+            <td>52</td>
+            <td>30</td>
+            <td>30</td>
+            <td>212</td>
+          </tr>
+          <tr>
+            <td>164</td>
+            <td>noctowl</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>70</td>
+            <td>100</td>
+            <td>158</td>
+            <td>50</td>
+            <td>50</td>
+            <td>408</td>
+          </tr>
+          <tr>
+            <td>165</td>
+            <td>ledyba</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>55</td>
+            <td>40</td>
+            <td>53</td>
+            <td>20</td>
+            <td>30</td>
+            <td>108</td>
+          </tr>
+          <tr>
+            <td>166</td>
+            <td>ledian</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>85</td>
+            <td>55</td>
+            <td>137</td>
+            <td>35</td>
+            <td>50</td>
+            <td>356</td>
+          </tr>
+          <tr>
+            <td>167</td>
+            <td>spinarak</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>30</td>
+            <td>40</td>
+            <td>50</td>
+            <td>60</td>
+            <td>40</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>168</td>
+            <td>ariados</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+            </td>
+            <td>40</td>
+            <td>70</td>
+            <td>140</td>
+            <td>90</td>
+            <td>70</td>
+            <td>335</td>
+          </tr>
+          <tr>
+            <td>169</td>
+            <td>crobat</td>
+            <td>
+              <span class="poisonous-pokemon pokemon"> poison</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>130</td>
+            <td>85</td>
+            <td>241</td>
+            <td>90</td>
+            <td>80</td>
+            <td>750</td>
+          </tr>
+          <tr>
+            <td>170</td>
+            <td>chinchou</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="electric-pokemon pokemon">electric</span>
+            </td>
+            <td>67</td>
+            <td>75</td>
+            <td>66</td>
+            <td>38</td>
+            <td>38</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>171</td>
+            <td>lanturn</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="electric-pokemon pokemon">electric</span>
+            </td>
+            <td>67</td>
+            <td>125</td>
+            <td>161</td>
+            <td>58</td>
+            <td>58</td>
+            <td>225</td>
+          </tr>
+          <tr>
+            <td>172</td>
+            <td>pichu</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>60</td>
+            <td>20</td>
+            <td>41</td>
+            <td>40</td>
+            <td>15</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>173</td>
+            <td>cleffa</td>
+            <td><span class="fairy-pokemon pokemon">fairy</span></td>
+            <td>15</td>
+            <td>50</td>
+            <td>44</td>
+            <td>25</td>
+            <td>28</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>174</td>
+            <td>igglybuff</td>
+            <td>
+              <span class="normal-pokemon pokemon">normal</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>15</td>
+            <td>90</td>
+            <td>42</td>
+            <td>30</td>
+            <td>15</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>175</td>
+            <td>togepi</td>
+            <td><span class="fairy-pokemon pokemon">fairy</span></td>
+            <td>20</td>
+            <td>35</td>
+            <td>49</td>
+            <td>20</td>
+            <td>65</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>176</td>
+            <td>togetic</td>
+            <td>
+              <span class="fairy-pokemon pokemon">fairy</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>40</td>
+            <td>55</td>
+            <td>142</td>
+            <td>40</td>
+            <td>85</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>177</td>
+            <td>natu</td>
+            <td>
+              <span class="psychic-pokemon pokemon">psychic</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>70</td>
+            <td>40</td>
+            <td>64</td>
+            <td>50</td>
+            <td>45</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>178</td>
+            <td>xatu</td>
+            <td>
+              <span class="psychic-pokemon pokemon">psychic</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>95</td>
+            <td>65</td>
+            <td>165</td>
+            <td>75</td>
+            <td>70</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>179</td>
+            <td>mareep</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>35</td>
+            <td>55</td>
+            <td>56</td>
+            <td>40</td>
+            <td>40</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>180</td>
+            <td>flaaffy</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>45</td>
+            <td>70</td>
+            <td>128</td>
+            <td>55</td>
+            <td>55</td>
+            <td>133</td>
+          </tr>
+          <tr>
+            <td>181</td>
+            <td>ampharos</td>
+            <td><span class="electric-pokemon pokemon">electric</span></td>
+            <td>55</td>
+            <td>90</td>
+            <td>230</td>
+            <td>75</td>
+            <td>85</td>
+            <td>615</td>
+          </tr>
+          <tr>
+            <td>182</td>
+            <td>bellossom</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>50</td>
+            <td>75</td>
+            <td>221</td>
+            <td>80</td>
+            <td>95</td>
+            <td>58</td>
+          </tr>
+          <tr>
+            <td>183</td>
+            <td>marill</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>40</td>
+            <td>70</td>
+            <td>88</td>
+            <td>20</td>
+            <td>50</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>184</td>
+            <td>azumarill</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="fairy-pokemon pokemon">fairy</span>
+            </td>
+            <td>50</td>
+            <td>100</td>
+            <td>189</td>
+            <td>50</td>
+            <td>80</td>
+            <td>285</td>
+          </tr>
+          <tr>
+            <td>185</td>
+            <td>sudowoodo</td>
+            <td><span class="rock-pokemon pokemon">rock</span></td>
+            <td>30</td>
+            <td>70</td>
+            <td>144</td>
+            <td>100</td>
+            <td>115</td>
+            <td>380</td>
+          </tr>
+          <tr>
+            <td>186</td>
+            <td>politoed</td>
+            <td><span class="water-pokemon pokemon">water</span></td>
+            <td>70</td>
+            <td>90</td>
+            <td>225</td>
+            <td>75</td>
+            <td>75</td>
+            <td>339</td>
+          </tr>
+          <tr>
+            <td>187</td>
+            <td>hoppip</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>50</td>
+            <td>35</td>
+            <td>50</td>
+            <td>35</td>
+            <td>40</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>188</td>
+            <td>skiploom</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>80</td>
+            <td>55</td>
+            <td>119</td>
+            <td>45</td>
+            <td>50</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>189</td>
+            <td>jumpluff</td>
+            <td>
+              <span class="grass-pokemon pokemon">grass</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>110</td>
+            <td>75</td>
+            <td>207</td>
+            <td>55</td>
+            <td>70</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>190</td>
+            <td>aipom</td>
+            <td><span class="normal-pokemon pokemon">normal</span></td>
+            <td>85</td>
+            <td>55</td>
+            <td>72</td>
+            <td>70</td>
+            <td>55</td>
+            <td>115</td>
+          </tr>
+          <tr>
+            <td>191</td>
+            <td>sunkern</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>30</td>
+            <td>30</td>
+            <td>36</td>
+            <td>30</td>
+            <td>30</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>192</td>
+            <td>sunflora</td>
+            <td><span class="grass-pokemon pokemon">grass</span></td>
+            <td>30</td>
+            <td>75</td>
+            <td>149</td>
+            <td>75</td>
+            <td>55</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>193</td>
+            <td>yanma</td>
+            <td>
+              <span class="bug-pokemon pokemon">bug</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>95</td>
+            <td>65</td>
+            <td>78</td>
+            <td>65</td>
+            <td>45</td>
+            <td>380</td>
+          </tr>
+          <tr>
+            <td>194</td>
+            <td>wooper</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>15</td>
+            <td>55</td>
+            <td>42</td>
+            <td>45</td>
+            <td>45</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>195</td>
+            <td>quagsire</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="ground-pokemon pokemon">ground</span>
+            </td>
+            <td>35</td>
+            <td>95</td>
+            <td>151</td>
+            <td>85</td>
+            <td>85</td>
+            <td>750</td>
+          </tr>
+          <tr>
+            <td>196</td>
+            <td>espeon</td>
+            <td><span class="psychic-pokemon pokemon">psychic</span></td>
+            <td>110</td>
+            <td>65</td>
+            <td>184</td>
+            <td>65</td>
+            <td>60</td>
+            <td>265</td>
+          </tr>
+          <tr>
+            <td>197</td>
+            <td>umbreon</td>
+            <td><span class="dark-pokemon pokemon">dark</span></td>
+            <td>65</td>
+            <td>95</td>
+            <td>184</td>
+            <td>65</td>
+            <td>110</td>
+            <td>270</td>
+          </tr>
+          <tr>
+            <td>198</td>
+            <td>murkrow</td>
+            <td>
+              <span class="dark-pokemon pokemon">dark</span>
+              <span class="flying-pokemon pokemon">flying</span>
+            </td>
+            <td>91</td>
+            <td>60</td>
+            <td>81</td>
+            <td>85</td>
+            <td>42</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>199</td>
+            <td>slowking</td>
+            <td>
+              <span class="water-pokemon pokemon">water</span>
+              <span class="psychic-pokemon pokemon">psychic</span>
+            </td>
+            <td>30</td>
+            <td>95</td>
+            <td>172</td>
+            <td>75</td>
+            <td>80</td>
+            <td>795</td>
+          </tr>
         </tbody>
       </table>
     </section>
