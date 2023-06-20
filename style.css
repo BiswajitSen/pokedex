@@ -1,19 +1,29 @@
+* {
+  padding: 0;
+  box-sizing: content-box;
+}
+
 .page {
-  width: 74em;
+  width: 76em;
   padding: 10px;
   font-family: sans-serif;
   text-align: center;
   margin: 0 auto;
+  border: 1px solid #aeaeae;
+  border-radius: 18px;
+  background: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
+  box-shadow: 0.2em 0.2em 2em gray;
 }
 
 #heading {
   text-align: center;
   font-family: sans-serif;
   font-size: 100px;
-  margin: 0;
+  margin: 0 auto;
   color: transparent;
-  background: linear-gradient(rgb(173, 216, 230), rgb(215, 235, 242));
+  background: linear-gradient(rgb(20, 107, 139), rgb(70, 170, 203));
   background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .pokemon-info {
@@ -23,25 +33,15 @@
 .pokedex {
   display: table;
   border-spacing: 1em;
-  width: 100%;
-  text-align: center;
-}
-
-.cards-row {
-  display: table-row;
 }
 
 .card {
-  width: 25%;
-  padding: 1em;
+  padding: 1.1em;
   text-align: center;
   display: table-cell;
   background-color: rgb(173, 216, 230);
   border-radius: 18px;
-}
-
-.pokemon-details {
-  width: 100%;
+  box-shadow: 0.4em 0.5em 0.7em black;
 }
 
 .pokemon-image {
@@ -49,18 +49,20 @@
   aspect-ratio: 1;
   background-color: rgb(215, 235, 242);
   border-radius: 18px;
+  box-shadow: 0.1em 0.2em 0.7em black;
 }
 
 .pokemon-name {
   font-weight: 900;
   font-size: 1.1em;
-  line-height: 1em;
 }
 
 .pokedex td {
   text-align: right;
+  border-spacing: 1em;
 }
 
 .pokedex th {
   text-align: left;
+  border-spacing: 1em;
 }
