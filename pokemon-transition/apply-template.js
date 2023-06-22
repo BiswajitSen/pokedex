@@ -37,46 +37,54 @@ const generatePokemonCard = (pokemonDetail) => {
     .padStart(3, 0)}.png`;
 
   return `${eachCardStart}
-<div class="pokemon-image-container">
-<img src="${imgUrl}" class = "pokemon-image"/>
+  <div class="pokemon-image">
+    <img 
+    src="${imgUrl}"
+    id="pokemon-${id}"
+    class = "pokemon-image"/>
+  </div>
+
+  <div class="pokemon-name"><p>${nameInCap}</p></div>
+
+  <div class="pokemon-info">
+    <div class="info">
+      <div class="property">Types</div>
+      <div class="value">${typesInCaps}</div>
+    </div>
+  
+    <div class="info">
+      <div class="property">Weight</div>
+      <div class="value">${weight}</div>
+    </div>
+  
+    <div class="info">
+      <div class="property">HP</div>
+      <div class="value">${hp}</div>
+    </div>
+  
+    <div class="info">
+      <div class="property">XP</div>
+      <div class="value">${xp}</div>
+    </div>
+    
+    <div class="info">
+      <div class="property">Attack</div>
+      <div class="value">${attack}</div>
+    </div>
+  
+    <div class="info">
+      <div class="property">Defence</div>
+      <div class="value">${defence}</div>
+    </div>
 </div>
-<div class="pokemon-name"><p>${nameInCap}</p></div>
-<table class="pokemon-info">
-<tbody>
-<tr>
-<th>Types</th>
-<td>${typesInCaps}</td>
-</tr>
-<tr>
-<th>Weight</th>
-<td>${weight}</td>
-<tr>
-<th>HP</th>
-<td>${hp}</td>
-</tr>
-<tr>
-<th>XP</th>
-<td>${xp}</td>
-</tr>
-<tr>
-<th>Attack</th>
-<td>${attack}</td>
-</tr>
-<tr>
-<th>Defence</th>
-<td>${defence}</td>
-</tr>
-</tbody>
-</table>
 </div>`;
 };
 
 const genrateCardRow = (section) => {
-  return `<section class="card-row">
+  return `
   ${section
       .map((pokemonDetails) => generatePokemonCard(pokemonDetails))
-      .join("\n")}
-  </section>`;
+      .join("\n")}`;
 };
 
 const chunk = (data, chunkSize) => {

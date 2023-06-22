@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page {
+  width: 1080px;
+  padding: 1em;
+  margin: 0 auto;
+  border: 1px solid #aeaeae;
+  border-radius: 18px;
+  box-shadow: 0.2em 0.2em 2em gray;
+  background: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
+}
+
+#heading {
+  text-align: center;
+  font-size: 7em;
+  padding: 0.2em;
+  margin: 0 auto;
+  color: transparent;
+  background: linear-gradient(rgb(20, 107, 139), rgb(70, 170, 203));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  gap: 1em;
+}
+
+.card {
+  height: 30%;
+  width: 20%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  box-shadow: 0.4em 0.5em 0.7em black;
+  background-color: rgb(173, 216, 230);
+  border-radius: 18px;
+}
+
+.avatar {
+  height: 13.6em;
+  aspect-ratio: 1;
+  background-color: rgb(215, 235, 242);
+  border-radius: 18px;
+  box-shadow: 0.1em 0.2em 0.7em black;
+}
+
+.pokemon-name {
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: 2.5s;
+  transition-timing-function: ease;
+  padding: 3px;
+  border: 0.3px solid transparent;
+  border-radius: 5px;
+}
+
+.attribute {
+  font-weight: 800;
+}
+
+.card:hover .stats:nth-child(even),
+.card:hover .stats:nth-child(odd) {
+  transform: translate(-15em, -10em);
+  z-index: 1;
+  border-radius: 1em;
+  background-color: rgb(173, 216, 230);
+  border: 0.3px solid black;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.card:hover .stats:nth-child(odd) {
+  transform: translate(15em, -10em);
+}
+
+.pokedex:has(.card:hover) .card:not(:hover) {
+  filter: blur(7px);
+}

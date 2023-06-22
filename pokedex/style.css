@@ -1,24 +1,24 @@
 * {
   padding: 0;
+  margin: 0;
   box-sizing: content-box;
+  font-family: sans-serif;
 }
 
 .page {
-  width: 76em;
-  padding: 10px;
-  font-family: sans-serif;
-  text-align: center;
+  width: 1080px;
+  padding: 1em;
   margin: 0 auto;
   border: 1px solid #aeaeae;
   border-radius: 18px;
-  background: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
   box-shadow: 0.2em 0.2em 2em gray;
+  background: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
 }
 
 #heading {
   text-align: center;
-  font-family: sans-serif;
-  font-size: 100px;
+  font-size: 6em;
+  padding: 5px;
   margin: 0 auto;
   color: transparent;
   background: linear-gradient(rgb(20, 107, 139), rgb(70, 170, 203));
@@ -31,21 +31,27 @@
 }
 
 .pokedex {
-  display: table;
-  border-spacing: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
 }
 
 .card {
-  padding: 1.1em;
-  text-align: center;
-  display: table-cell;
+  height: 30%;
+  width: 20%;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.4em 0.5em 0.7em black;
   background-color: rgb(173, 216, 230);
   border-radius: 18px;
-  box-shadow: 0.4em 0.5em 0.7em black;
 }
 
 .pokemon-image {
-  height: 240px;
+  height: 13.6em;
   aspect-ratio: 1;
   background-color: rgb(215, 235, 242);
   border-radius: 18px;
@@ -53,16 +59,15 @@
 }
 
 .pokemon-name {
+  padding: 0.5em;
   font-weight: 900;
   font-size: 1.1em;
 }
 
 .pokedex td {
   text-align: right;
-  border-spacing: 1em;
 }
 
 .pokedex th {
   text-align: left;
-  border-spacing: 1em;
 }
