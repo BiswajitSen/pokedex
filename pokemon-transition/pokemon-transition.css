@@ -1,3 +1,9 @@
+:root {
+  --voilet-gradient: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
+  --blue-gradient: linear-gradient(rgb(20, 107, 139), rgb(70, 170, 203));
+  --theme-color: rgb(173, 216, 230);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +19,7 @@
   border: 1px solid #aeaeae;
   border-radius: 18px;
   box-shadow: 0.2em 0.2em 2em gray;
-  background: linear-gradient(rgb(167, 175, 207), rgb(116, 126, 168));
+  background: var(--voilet-gradient);
 }
 
 #heading {
@@ -22,7 +28,7 @@
   padding: 0.2em;
   margin: 0 auto;
   color: transparent;
-  background: linear-gradient(rgb(20, 107, 139), rgb(70, 170, 203));
+  background: var(--blue-gradient);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -45,7 +51,7 @@
   justify-content: flex-start;
   gap: 1em;
   box-shadow: 0.4em 0.5em 0.7em black;
-  background-color: rgb(173, 216, 230);
+  background-color: var(--theme-color);
   border-radius: 18px;
 }
 
@@ -83,6 +89,14 @@
   font-weight: 800;
 }
 
+.avatar {
+  transition: 2.5s;
+}
+
+.pokemon-name {
+  transition: 2.5s;
+}
+
 .card:hover .stats:nth-child(even),
 .card:hover .stats:nth-child(odd) {
   transform: translate(-15em, -10em);
@@ -95,9 +109,18 @@
 }
 
 .card:hover .stats:nth-child(odd) {
-  transform: translate(15em, -10em);
+  transform: translate(15em, -8.99em);
 }
 
 .pokedex:has(.card:hover) .card:not(:hover) {
   filter: blur(7px);
+}
+
+.card:hover .pokemon-name {
+  translate: 0px -175px;
+  color: rgb(99, 94, 81);
+}
+
+.card:hover .avatar {
+  transform: scale(1.05) translateY(50px);
 }
